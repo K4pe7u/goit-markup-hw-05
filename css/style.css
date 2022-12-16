@@ -16,10 +16,7 @@
   margin: 0;
   padding: 0;
 }
-:hover,
-:focus {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--color7);
@@ -81,6 +78,9 @@ ul {
 .main-nav a:focus {
   cursor: pointer;
   color: var(--color2);
+  transition-property: color, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-nav a.main-link {
   position: relative;
@@ -111,6 +111,9 @@ ul {
 .header-contacts a:focus {
   cursor: pointer;
   color: var(--color2);
+  transition-property: color, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main {
   margin: 0 auto;
@@ -291,6 +294,9 @@ ul {
 .clients-list > li:hover > svg,
 .clients-list > li:focus > svg {
   fill: var(--color2);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-list > li:hover,
 .clients-list > li:focus {
@@ -338,6 +344,9 @@ ul {
 .footer-contacts a:focus {
   cursor: pointer;
   color: var(--color2);
+  transition-property: color, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-links h2 {
@@ -370,7 +379,10 @@ ul {
 .socialmedia-footer > div > a:focus {
   fill: var(--color2);
   cursor: pointer;
-  background: var(--color2);
+  background-color: var(--color2);
+  transition-property: fill, background-color, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-main > .container {
@@ -399,10 +411,12 @@ ul {
 .button-portfolio-list button:hover,
 .button-portfolio-list button:focus {
   color: var(--color5);
-  background: var(--color2);
+  background-color: var(--color2);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-pages-list {
@@ -411,27 +425,32 @@ ul {
 .portfolio-pages-list li:hover,
 .portfolio-pages-list li:focus {
   cursor: pointer;
-  border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-property: cursor, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .roll-box {
+  width: 370px;
+  height: 294px;
   position: relative;
   overflow: hidden;
-  vertical-align: middle;
 }
 .roll-text {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   transform: translateY(100%);
   transition: transform 250ms ease;
   background-color: rgba(33, 150, 243, 0.9);
 }
-.roll-box:hover .roll-text {
+.portfolio-pages-list li:hover .roll-text {
   transform: translateY(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .roll-text > p {
   color: var(--color5);
@@ -464,6 +483,8 @@ ul {
   gap: 30px;
 }
 .tale {
+  width: 370px;
+  height: 110px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -471,7 +492,6 @@ ul {
   align-items: flex-start;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
-  margin-top: -4px;
 }
 
 .portfolio-pages-list span:nth-child(odd) {
@@ -513,6 +533,9 @@ ul {
 .header-contacts svg:hover,
 .header-contacts svg:focus {
   fill: var(--color2);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .phone-number {
@@ -547,11 +570,17 @@ ul {
 .socialmedia > div > a:hover,
 .socialmedia > div > a:focus {
   background-color: var(--color2);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .socialmedia > div > a:hover > svg,
 .socialmedia > div > a:focus > svg {
   fill: var(--color5);
   cursor: pointer;
+  transition-property: fill, cursor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -583,6 +612,8 @@ ul {
   opacity: 0;
 }
 .modal-close {
+  display: flex;
+  vertical-align: middle;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -593,6 +624,4 @@ ul {
   background-color: var(--color5);
   border-radius: 50%;
   cursor: pointer;
-  display: flex;
-  vertical-align: middle;
 }
